@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Container Actions</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #00796b;
+      text-shadow: 1px 1px 2px #aaa;
+    }
+
+    /* Container Styles */
+    .container {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 350px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    /* Button Styles */
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #26a69a;
+      color: #fff;
+      font-size: 0.95em;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #00796b;
+      transform: scale(1.05);
+    }
+
+    /* Image Styling */
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Smooth content transition */
+    .fade {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Container Actions</h1>
+
+  <!-- 1. Toggle Show/Hide Container -->
+  <div class="container fade" id="container1">
+    <p id="toggleText1">This container’s content can be shown or hidden using the button below.</p>
+    <button onclick="toggleContainer1()">Hide Content</button>
+  </div>
+
+  <!-- 2. Show Container -->
+  <div class="container fade" id="container2" style="display: none;">
+    <p>This container was hidden initially and will appear when shown.</p>
+    <button onclick="showContainer()">Show</button>
+  </div>
+
+  <!-- 3. Change Image -->
+  <div class="container fade" id="container3">
+    <img id="demoImage" src="image1.jpg" alt="Example Image">
+    <button onclick="changeImage()">Change Image</button>
+  </div>
+
+  <!-- 4. Change Background Colour -->
+  <div class="container fade" id="container4">
+    <p>Click the button to change this container’s background color.</p>
+    <button onclick="changeColor()">Change Color</button>
+  </div>
+
+  <!-- 5. Change HTML Content -->
+  <div class="container fade" id="container5">
+    <p id="contentText">Original content of this container.</p>
+    <button onclick="changeContent()">Change Content</button>
+  </div>
+
+  <!-- 6. Display Sum of 5 + 6 -->
+  <div class="container fade" id="container6">
+    <p id="sumResult">Click the button to show the sum of 5 + 6.</p>
+    <button onclick="showSum()">Show Sum</button>
+  </div>
+
+  <script src="assignemnt.js"></script>
+</body>
+</html>
